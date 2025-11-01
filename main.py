@@ -792,7 +792,7 @@ def ping():
     return "pong"
 
 def run_flask():
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host='0.0.0.0', port=10000)
 
 def keep_alive():
     server = Thread(target=run_flask)
