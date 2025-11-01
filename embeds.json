@@ -1,0 +1,64 @@
+{
+  "1433885959635861534": {
+    "tche": {
+      "title": "chei de odio",
+      "description": "",
+      "color": 3447003,
+      "fields": [],
+      "footer": "",
+      "thumbnail": "",
+      "image": ""
+    },
+    "Beneficios": {
+      "title": "beneficios booster",
+      "description": "#0000000",
+      "color": 3447003,
+      "fields": [],
+      "footer": "",
+      "thumbnail": "",
+      "image": ""
+    },
+    "[nome]": {
+      "title": "s!embed_create Beneficios booster",
+      "description": "beneficios booster",
+      "color": 0,
+      "fields": [
+        {
+          "name": "q",
+          "value": "pular",
+          "inline": false
+        }
+      ],
+      "footer": "",
+      "thumbnail": "",
+      "image": ""
+    },
+    "Boosters": {
+      "title": "Beneficios para boosters",
+      "description": "cargo de imagem Altera\u00e7\u00e3o de nickname\n[1049109576299061318](https://cdn.discordapp.com/emojis/1430979931906773095.webp?size=48&name=1049109576299061318) Cria\u00e7\u00e3o de enquetes\n[1049109576299061318](https://cdn.discordapp.com/emojis/1430979931906773095.webp?size=48&name=1049109576299061318) Envio de m\u00eddias no \u2060sms\n[1049109576299061318](https://cdn.discordapp.com/emojis/1430979931906773095.webp?size=48&name=1049109576299061318) Envio de emojis e figurinhas externas\n[1049109576299061318](https://cdn.discordapp.com/emojis/1430979931906773095.webp?size=48&name=1049109576299061318) Cor exclusiva no perfil\n[1049109576299061318](https://cdn.discordapp.com/emojis/1430979931906773095.webp?size=48&name=1049109576299061318) \u00cdcone personalizado para o cargo @\u2800\u2009fear boosters\n[1049109576299061318](https://cdn.discordapp.com/emojis/1430979931906773095.webp?size=48&name=1049109576299061318) Acesso ao comando pd\n[1049109576299061318](https://cdn.discordapp.com/emojis/1430979931906773095.webp?size=48&name=1049109576299061318) Acesso ao comando cl",
+      "color": 3447003,
+      "fields": [],
+      "footer": "",
+      "thumbnail": "",
+      "image": ""
+    },
+    "beneficios": {
+      "title": "Beneficios para boosters",
+      "description": "Altera\u00e7\u00e3o de nickname\n Cria\u00e7\u00e3o de enquetes\nEnvio de m\u00eddias no \u2060sms\nEnvio de emojis e figurinhas externas\nCor exclusiva no perfil\n\u00cdcone personalizado para o cargo @\u2800\u2009fear boosters\nAcesso ao comando pd\nAcesso ao comando cl",
+      "color": 3447003,
+      "fields": [],
+      "footer": "",
+      "thumbnail": "",
+      "image": ""
+    },
+    "benef": {
+      "title": "Beneficios booster",
+      "description": "Altera\u00e7\u00e3o de nickname\nCria\u00e7\u00e3o de enquetes\nEnvio de m\u00eddias no \u2060sms\nEnvio de emojis e figurinhas externas\nCor exclusiva no perfil",
+      "color": 3447003,
+      "fields": [],
+      "footer": "",
+      "thumbnail": "",
+      "image": ""
+    }
+  }
+}

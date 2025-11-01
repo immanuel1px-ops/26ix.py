@@ -1,0 +1,34 @@
+import discord
+from discord.ext import commands
+import asyncio
+import os
+
+TOKEN = os.environ['DISCORD_TOKEN']  # Token como variável de ambiente
+PREFIX = "s!"
+
+intents = discord.Intents.default()
+intents.messages = True
+intents.guilds = True
+
+bot = commands.Bot(command_prefix=PREFIX, intents=intents, help_command=None)
+
+@bot.event
+async def on_ready():
+    print(f'✅ {bot.user.name} online 24/7!')
+    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="s!ajuda"))
+
+@bot.command()
+async def ping(ctx):
+    await ctx.send(f'🏓 Pong! {round(bot.latency * 1000)}ms')
+
+# Seu código aqui...
+
+# Manter o bot vivo
+async def keep_alive():
+    while True:
+        await asyncio.sleep(300)  # Manter conexão
+
+if __name__ == "__main__":
+    # Iniciar tarefa de keep-alive
+    bot.loop.create_task(keep_alive())
+    bot.run(TOKEN)
