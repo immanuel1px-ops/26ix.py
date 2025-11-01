@@ -1,11 +1,12 @@
-FROM python:3.11-slim-bullseye
+FROM python:3.11-alpine
 
 WORKDIR /app
 
-# Instalar dependências necessárias
-RUN apt-get update && apt-get install -y \
+# Instalar dependências de compilação
+RUN apk add --no-cache \
     gcc \
-    && rm -rf /var/lib/apt/lists/*
+    musl-dev \
+    linux-headers
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
