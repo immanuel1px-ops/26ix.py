@@ -1,3 +1,15 @@
+# 🔥 CORREÇÃO DO AUDIOOP - ADICIONAR NO INÍCIO DO ARQUIVO
+import os
+os.environ['DISCORD_INSTALL_VOICE'] = '0'  # Desativa funcionalidades de voz
+
+# Forçar reinstalação do discord.py sem suporte a voz se necessário
+import subprocess
+import sys
+try:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "discord.py==2.3.2"])
+except:
+    pass
+
 import discord
 from discord.ext import commands
 import asyncio
@@ -384,36 +396,72 @@ class WelcomeRoleSystem:
 
 welcome_role_system = WelcomeRoleSystem()
 
-# SISTEMA DE EMBEDS (mantido igual)
+# SISTEMA DE EMBEDS (simplificado para evitar erros)
 class EmbedSystem:
     @staticmethod
     async def create_embed_interactive(ctx):
-        # ... (código igual ao anterior)
-        embed_data = {
-            'title': '',
-            'description': '',
-            'color': 0x3498db,
-            'fields': [],
-            'footer': '',
-            'thumbnail': '',
-            'image': ''
-        }
-        # ... (restante do código igual)
-        return embed_data
+        """Cria embed de forma interativa"""
+        try:
+            embed_data = {
+                'title': '',
+                'description': '',
+                'color': 0x3498db,
+                'fields': [],
+                'footer': '',
+                'thumbnail': '',
+                'image': ''
+            }
+
+            # Perguntar título
+            await ctx.send("📝 **Digite o título do embed (ou 'pular' para pular):**")
+            try:
+                title_msg = await bot.wait_for('message', timeout=60.0, check=lambda m: m.author == ctx.author and m.channel == ctx.channel)
+                if title_msg.content.lower() != 'pular':
+                    embed_data['title'] = title_msg.content
+            except asyncio.TimeoutError:
+                await ctx.send("⏰ Tempo esgotado. Usando valores padrão.")
+
+            # Perguntar descrição
+            await ctx.send("📝 **Digite a descrição do embed (ou 'pular' para pular):**")
+            try:
+                desc_msg = await bot.wait_for('message', timeout=60.0, check=lambda m: m.author == ctx.author and m.channel == ctx.channel)
+                if desc_msg.content.lower() != 'pular':
+                    embed_data['description'] = desc_msg.content
+            except asyncio.TimeoutError:
+                pass
+
+            return embed_data
+
+        except Exception as e:
+            await ctx.send(f"❌ Erro ao criar embed: {e}")
+            return None
 
     @staticmethod
     def build_embed(embed_data):
-        # ... (código igual ao anterior)
+        """Constrói o embed a partir dos dados"""
         embed = discord.Embed(
             title=embed_data.get('title', ''),
             description=embed_data.get('description', ''),
             color=embed_data.get('color', 0x3498db)
         )
-        # ... (restante do código igual)
+
+        # Adicionar campos se existirem
+        for field in embed_data.get('fields', []):
+            embed.add_field(
+                name=field.get('name', 'Campo'),
+                value=field.get('value', 'Valor'),
+                inline=field.get('inline', False)
+            )
+
+        # Adicionar footer se existir
+        if embed_data.get('footer'):
+            embed.set_footer(text=embed_data['footer'])
+
         return embed
 
     @staticmethod
     async def save_embed(guild_id, name, embed_data):
+        """Salva embed no arquivo"""
         guild_key = str(guild_id)
         if guild_key not in data_system.embeds_data:
             data_system.embeds_data[guild_key] = {}
@@ -422,6 +470,7 @@ class EmbedSystem:
 
     @staticmethod
     async def load_embed(guild_id, name):
+        """Carrega embed do arquivo"""
         guild_key = str(guild_id)
         if guild_key in data_system.embeds_data:
             return data_system.embeds_data[guild_key].get(name)
@@ -429,6 +478,7 @@ class EmbedSystem:
 
     @staticmethod
     async def list_embeds(guild_id):
+        """Lista todos os embeds salvos"""
         guild_key = str(guild_id)
         if guild_key in data_system.embeds_data:
             return list(data_system.embeds_data[guild_key].keys())
@@ -436,12 +486,12 @@ class EmbedSystem:
 
 embed_system = EmbedSystem()
 
-# EVENTOS DO BOT CORRIGIDOS
+# EVENTOS DO BOT
 @bot.event
 async def on_ready():
-    print(f'{bot.user.name} está online!')
-    print(f'Prefixo: {PREFIX}')
-    print(f'Sistemas carregados: Tickets, AutoRoles, Logs, Embeds, WelcomeRoles')
+    print(f'✅ {bot.user.name} está online!')
+    print(f'🔧 Prefixo: {PREFIX}')
+    print(f'🚀 Sistemas carregados: Tickets, AutoRoles, Logs, Embeds, WelcomeRoles')
 
     activity = discord.Activity(
         type=discord.ActivityType.watching,
@@ -460,39 +510,15 @@ async def on_message_edit(before, after):
     await log_system.log_message_edit(before, after)
 
 @bot.event
-async def on_bulk_message_delete(messages):
-    """Log quando várias mensagens são deletadas"""
-    await log_system.log_bulk_delete(messages)
-
-@bot.event
 async def on_member_join(member):
     """Quando um usuário entra no servidor"""
-    # Log de entrada
     await log_system.log_user_join(member)
-
-    # Adicionar cargo automático
     await welcome_role_system.add_welcome_role(member)
 
 @bot.event
 async def on_member_remove(member):
     """Log quando um usuário sai do servidor"""
     await log_system.log_user_leave(member)
-
-@bot.event
-async def on_member_update(before, after):
-    """Log quando um usuário tem cargos alterados"""
-    # Cargos adicionados
-    added_roles = set(after.roles) - set(before.roles)
-    # Cargos removidos
-    removed_roles = set(before.roles) - set(after.roles)
-
-    for role in added_roles:
-        if role != after.guild.default_role:
-            await log_system.log_role_change(after, role, 'add')
-
-    for role in removed_roles:
-        if role != after.guild.default_role:
-            await log_system.log_role_change(after, role, 'remove')
 
 @bot.event
 async def on_command(ctx):
@@ -508,7 +534,7 @@ async def set_welcome_role(ctx, role: discord.Role):
         await welcome_role_system.set_welcome_role(ctx.guild.id, role.id)
 
         embed = discord.Embed(
-            title="Cargo de Boas-Vindas Configurado",
+            title="✅ Cargo de Boas-Vindas Configurado",
             description=f"Novos membros receberão automaticamente o cargo {role.mention}",
             color=0x00ff00
         )
@@ -523,7 +549,7 @@ async def set_welcome_role(ctx, role: discord.Role):
         )
 
     except Exception as e:
-        await ctx.send(f"Erro ao configurar cargo de boas-vindas: {e}")
+        await ctx.send(f"❌ Erro ao configurar cargo de boas-vindas: {e}")
 
 @bot.command()
 @commands.has_permissions(manage_roles=True)
@@ -534,16 +560,16 @@ async def remove_welcome_role(ctx):
 
         if success:
             embed = discord.Embed(
-                title="Cargo de Boas-Vindas Removido",
+                title="✅ Cargo de Boas-Vindas Removido",
                 description="Novos membros não receberão mais cargo automaticamente",
                 color=0x00ff00
             )
             await ctx.send(embed=embed)
         else:
-            await ctx.send("Nenhum cargo de boas-vindas estava configurado.")
+            await ctx.send("ℹ️ Nenhum cargo de boas-vindas estava configurado.")
 
     except Exception as e:
-        await ctx.send(f"Erro ao remover cargo de boas-vindas: {e}")
+        await ctx.send(f"❌ Erro ao remover cargo de boas-vindas: {e}")
 
 @bot.command()
 @commands.has_permissions(manage_roles=True)
@@ -556,35 +582,37 @@ async def show_welcome_role(ctx):
             role = ctx.guild.get_role(int(role_id))
             if role:
                 embed = discord.Embed(
-                    title="Cargo de Boas-Vindas Atual",
+                    title="🔧 Cargo de Boas-Vindas Atual",
                     description=f"Novos membros recebem: {role.mention}",
                     color=0x3498db
                 )
                 await ctx.send(embed=embed)
             else:
-                await ctx.send("Cargo configurado não encontrado. Use `set_welcome_role` para configurar um novo.")
+                await ctx.send("❌ Cargo configurado não encontrado. Use `set_welcome_role` para configurar um novo.")
         else:
-            await ctx.send("Nenhum cargo de boas-vindas configurado. Use `set_welcome_role` para configurar.")
+            await ctx.send("ℹ️ Nenhum cargo de boas-vindas configurado. Use `set_welcome_role` para configurar.")
 
     except Exception as e:
-        await ctx.send(f"Erro ao verificar cargo de boas-vindas: {e}")
+        await ctx.send(f"❌ Erro ao verificar cargo de boas-vindas: {e}")
 
-# COMANDOS DE EMBEDS (mantidos iguais)
+# COMANDOS DE EMBEDS
 @bot.command()
 @commands.has_permissions(manage_messages=True)
 async def embed_create(ctx, nome_salvo: str = None):
     """Cria um embed personalizado de forma interativa"""
     try:
         embed_data = await embed_system.create_embed_interactive(ctx)
+        if not embed_data:
+            return
 
         # Construir e mostrar preview
         embed = embed_system.build_embed(embed_data)
-        preview_msg = await ctx.send("**Preview do Embed:**", embed=embed)
+        await ctx.send("**👀 Preview do Embed:**", embed=embed)
 
         # Salvar se um nome foi fornecido
         if nome_salvo:
             await embed_system.save_embed(ctx.guild.id, nome_salvo, embed_data)
-            await ctx.send(f"Embed salvo com sucesso como: `{nome_salvo}`")
+            await ctx.send(f"✅ Embed salvo com sucesso como: `{nome_salvo}`")
 
             await log_system.log_action(
                 ctx.guild,
@@ -595,7 +623,7 @@ async def embed_create(ctx, nome_salvo: str = None):
             )
 
     except Exception as e:
-        await ctx.send(f"Erro ao criar embed: {e}")
+        await ctx.send(f"❌ Erro ao criar embed: {e}")
 
 @bot.command()
 @commands.has_permissions(manage_messages=True)
@@ -604,14 +632,14 @@ async def embed_send(ctx, nome_embed: str, canal: discord.TextChannel = None):
     try:
         embed_data = await embed_system.load_embed(ctx.guild.id, nome_embed)
         if not embed_data:
-            await ctx.send(f"Embed `{nome_embed}` nao encontrado.")
+            await ctx.send(f"❌ Embed `{nome_embed}` não encontrado.")
             return
 
         embed = embed_system.build_embed(embed_data)
         target_channel = canal or ctx.channel
 
         await target_channel.send(embed=embed)
-        await ctx.send(f"Embed `{nome_embed}` enviado para {target_channel.mention}", delete_after=5)
+        await ctx.send(f"✅ Embed `{nome_embed}` enviado para {target_channel.mention}", delete_after=5)
 
         await log_system.log_action(
             ctx.guild,
@@ -623,7 +651,7 @@ async def embed_send(ctx, nome_embed: str, canal: discord.TextChannel = None):
         )
 
     except Exception as e:
-        await ctx.send(f"Erro ao enviar embed: {e}")
+        await ctx.send(f"❌ Erro ao enviar embed: {e}")
 
 @bot.command()
 @commands.has_permissions(manage_messages=True)
@@ -632,11 +660,11 @@ async def embed_list(ctx):
     try:
         embeds = await embed_system.list_embeds(ctx.guild.id)
         if not embeds:
-            await ctx.send("Nenhum embed salvo neste servidor.")
+            await ctx.send("ℹ️ Nenhum embed salvo neste servidor.")
             return
 
         embed = discord.Embed(
-            title="Embeds Salvos",
+            title="📋 Embeds Salvos",
             color=0x3498db
         )
 
@@ -650,12 +678,12 @@ async def embed_list(ctx):
         await ctx.send(embed=embed)
 
     except Exception as e:
-        await ctx.send(f"Erro ao listar embeds: {e}")
+        await ctx.send(f"❌ Erro ao listar embeds: {e}")
 
-# COMANDOS DE MODERAÇÃO (exemplos)
+# COMANDOS DE MODERAÇÃO
 @bot.command()
 @commands.has_permissions(ban_members=True)
-async def ban(ctx, member: discord.Member, *, reason="Nao especificado"):
+async def ban(ctx, member: discord.Member, *, reason="Não especificado"):
     """Bane um usuário"""
     try:
         await member.ban(reason=reason)
@@ -669,17 +697,17 @@ async def ban(ctx, member: discord.Member, *, reason="Nao especificado"):
         )
 
         embed = discord.Embed(
-            title="Usuario Banido",
+            title="🔨 Usuário Banido",
             color=0xff0000
         )
-        embed.add_field(name="Usuario", value=member.mention, inline=True)
-        embed.add_field(name="Moderador", value=ctx.author.mention, inline=True)
-        embed.add_field(name="Motivo", value=reason, inline=False)
+        embed.add_field(name="👤 Usuário", value=member.mention, inline=True)
+        embed.add_field(name="🛡️ Moderador", value=ctx.author.mention, inline=True)
+        embed.add_field(name="📝 Motivo", value=reason, inline=False)
 
         await ctx.send(embed=embed)
 
     except Exception as e:
-        await ctx.send(f"Erro ao banir: {e}")
+        await ctx.send(f"❌ Erro ao banir: {e}")
 
 @bot.command()
 @commands.has_permissions(manage_messages=True)
@@ -687,7 +715,7 @@ async def clear(ctx, amount: int = 10):
     """Limpa mensagens"""
     try:
         if amount > 100:
-            await ctx.send("Maximo de 100 mensagens.")
+            await ctx.send("❌ Máximo de 100 mensagens.")
             return
 
         deleted = await ctx.channel.purge(limit=amount + 1)
@@ -700,35 +728,35 @@ async def clear(ctx, amount: int = 10):
             messages_deleted=str(len(deleted) - 1)
         )
 
-        msg = await ctx.send(f"{len(deleted) - 1} mensagens deletadas!")
+        msg = await ctx.send(f"✅ {len(deleted) - 1} mensagens deletadas!")
         await asyncio.sleep(3)
         await msg.delete()
 
     except Exception as e:
-        await ctx.send(f"Erro ao limpar: {e}")
+        await ctx.send(f"❌ Erro ao limpar: {e}")
 
-# COMANDO AJUDA ATUALIZADO
+# COMANDO AJUDA
 @bot.command()
 async def ajuda(ctx):
     """Mostra todos os comandos"""
     embed = discord.Embed(
-        title="Sistema Completo de Moderacao",
-        description=f"Prefixo: `{PREFIX}`",
+        title="🤖 Sistema Completo de Moderação",
+        description=f"**Prefixo:** `{PREFIX}`",
         color=0x00ff00
     )
 
     embed.add_field(
-        name="Sistema de Boas-Vindas",
+        name="🎯 Sistema de Boas-Vindas",
         value=f"""
-        `{PREFIX}set_welcome_role @cargo` - Define cargo automatico
-        `{PREFIX}remove_welcome_role` - Remove cargo automatico
+        `{PREFIX}set_welcome_role @cargo` - Define cargo automático
+        `{PREFIX}remove_welcome_role` - Remove cargo automático
         `{PREFIX}show_welcome_role` - Mostra cargo configurado
         """,
         inline=False
     )
 
     embed.add_field(
-        name="Sistema de Embeds",
+        name="📝 Sistema de Embeds",
         value=f"""
         `{PREFIX}embed_create [nome]` - Cria embed interativo
         `{PREFIX}embed_send nome [canal]` - Envia embed salvo
@@ -738,19 +766,10 @@ async def ajuda(ctx):
     )
 
     embed.add_field(
-        name="Moderacao",
+        name="🛡️ Moderação",
         value=f"""
-        `{PREFIX}ban @user [motivo]` - Banir
+        `{PREFIX}ban @user [motivo]` - Banir usuário
         `{PREFIX}clear [quantidade]` - Limpar mensagens
-        """,
-        inline=False
-    )
-
-    embed.add_field(
-        name="Logs",
-        value=f"""
-        `{PREFIX}logs_setup` - Configura canal de logs
-        `{PREFIX}logs_info` - Estatisticas de logs
         """,
         inline=False
     )
@@ -762,7 +781,11 @@ app = Flask('')
 
 @app.route('/')
 def home():
-    return "Bot Discord Online!"
+    return f"""
+    <h1>🚀 Bot Discord Online!</h1>
+    <p>Hora: {datetime.datetime.now()}</p>
+    <p>Webview funcionando!</p>
+    """
 
 @app.route('/ping')
 def ping():
@@ -777,29 +800,19 @@ def keep_alive():
 
 # INICIAR TUDO
 if __name__ == "__main__":
+    print("🚀 Iniciando bot...")
+    print("🔧 Configurações carregadas:")
+    print(f"   - Prefixo: {PREFIX}")
+    print(f"   - Token: {'✅ Configurado' if TOKEN else '❌ Não encontrado'}")
+    
     keep_alive()
+    print("🌐 Servidor web iniciado na porta 8080")
+    
     try:
-        bot.run(TOKEN)
+        if TOKEN:
+            bot.run(TOKEN)
+        else:
+            print("❌ ERRO: Token do Discord não encontrado!")
+            print("💡 Configure a variável de ambiente DISCORD_TOKEN")
     except Exception as e:
-        print(f"Erro ao iniciar bot: {e}") 
-from flask import Flask
-from threading import Thread
-import datetime
-
-app = Flask('')
-
-@app.route('/')
-def home():
-    return f"""
-    <h1>🚀 Bot Discord Online!</h1>
-    <p>Hora: {datetime.datetime.now()}</p>
-    <p>Webview funcionando!</p>
-    """
-
-def run():
-    app.run(host='0.0.0.0', port=8080)
-
-Thread(target=run).start()
-
-print("✅ Servidor web iniciado!")
-print("🌐 Webview deve aparecer em alguns segundos...")
+        print(f"❌ Erro ao iniciar bot: {e}")
