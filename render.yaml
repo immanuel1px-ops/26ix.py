@@ -1,0 +1,4 @@
+services:
+  - type: web
+    name: meu-bot-discord
+    env: docker
