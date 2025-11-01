@@ -543,5 +543,570 @@
     "timestamp": "2025-11-01T00:27:30.152448",
     "user": "366re (1112424601201422577)",
     "member_count": 22
+  },
+  "1433885959635861534-1761957005": {
+    "action": "message_edit",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:30:05.087857",
+    "author": "meupassadomecondena (1432715679844274319)",
+    "channel": "sms",
+    "before_content": "rapaziada, quem divulgar vai ter o direito de colocar 1 figurinha no sv",
+    "after_content": "rapaziada quem divulgar vai ter o direito de colocar 1 figurinha no sv",
+    "message_id": 1433976289341210634
+  },
+  "1433885959635861534-1761957130": {
+    "action": "message_edit",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:32:10.817342",
+    "author": "2806208 (1433104984421175348)",
+    "channel": "sms",
+    "before_content": "acordam cedo pra trabalhar s saber se v\u00e3o voltar",
+    "after_content": "acordam cedo pra trabalhar sem saber se v\u00e3o voltar",
+    "message_id": 1433976848747860082
+  },
+  "1433885959635861534-1761957174": {
+    "action": "user_join",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:32:54.822571",
+    "user": "queodioporra0922 (1079876401777344513)",
+    "account_created": "27/02/2023 21:23",
+    "member_count": 23
+  },
+  "1433885959635861534-1761957175": {
+    "action": "welcome_role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:32:55.334891",
+    "user": "queodioporra0922 (1079876401777344513)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761957180": {
+    "action": "role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:33:00.126101",
+    "user": "queodioporra0922 (1079876401777344513)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761957191": {
+    "action": "message_delete",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:33:11.966332",
+    "author": "meupassadomecondena (1432715679844274319)",
+    "channel": "sms",
+    "content": "",
+    "message_id": 1433976862333472809,
+    "attachments_count": 3
+  },
+  "1433885959635861534-1761957548": {
+    "action": "welcome_role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:39:08.753798",
+    "user": "seefodeputa (1422349939568279603)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761957552": {
+    "action": "welcome_role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:39:12.558597",
+    "user": "vickloi__42334 (1426346586690027695)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761957556": {
+    "action": "role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:39:16.376374",
+    "user": "vickloi__42334 (1426346586690027695)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761957563": {
+    "action": "message_delete",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:39:23.555849",
+    "author": "m4ryz1nha (1433253227440115915)",
+    "channel": "sms",
+    "content": "# sant mamou meu pau agorinha pouco",
+    "message_id": 1433978637421645864,
+    "attachments_count": 0
+  },
+  "1433885959635861534-1761957826": {
+    "action": "user_join",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:43:46.516827",
+    "user": ".sweetw (1393258988413518055)",
+    "account_created": "11/07/2025 15:53",
+    "member_count": 26
+  },
+  "1433885959635861534-1761957827": {
+    "action": "role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:43:47.581911",
+    "user": ".sweetw (1393258988413518055)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761957831": {
+    "action": "welcome_role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:43:51.464629",
+    "user": ".sweetw (1393258988413518055)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761957836": {
+    "action": "message_edit",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:43:56.906226",
+    "author": "miliiwg (1228316646708613161)",
+    "channel": "sms",
+    "before_content": ";-:",
+    "after_content": ";-;;",
+    "message_id": 1433979816683634822
+  },
+  "1433885959635861534-1761958153": {
+    "action": "message_delete",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:49:13.014012",
+    "author": "uyuyuyuyuyz_17674 (1421347002326716461)",
+    "channel": "sms",
+    "content": "Vis\u00e3o geral\nLetras\nCrioulos em paris\nKeep calm pq nois faz as nota\nExiste 2 tipo de mc\nOs que tem papai e os que tem proposta\nCuspo na marca de roupa mais cara da europa\nPq negros falam agora\nHater quer matar minha vibe igual puta\nMas sai do evento de cabe\u00e7a baixa\nImperio do crack igual o grande fuma\u00e7a\nMentirosos igual og loc\nE vc ja imagina a cor desse cara\nO carti ja lan\u00e7ou o album e vcs tao parado nao implaca em nada\nE so fala\nPorra\nRealmente esse mundo eh uma bosta\nE ta chato\nComo eu vou ata...",
+    "message_id": 1433981116548780102,
+    "attachments_count": 0
+  },
+  "1433885959635861534-1761958193": {
+    "action": "welcome_role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:49:53.575282",
+    "user": ".fmbot#8173 (356268235697553409)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761958197": {
+    "action": "role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:49:57.203026",
+    "user": ".fmbot#8173 (356268235697553409)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761958224": {
+    "action": "user_leave",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:50:24.690344",
+    "user": "stela.mpx (1433930632681095319)",
+    "member_count": 26
+  },
+  "1433885959635861534-1761958416": {
+    "action": "user_join",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:53:36.823288",
+    "user": "augusterz38 (1111075280556134440)",
+    "account_created": "24/05/2023 23:36",
+    "member_count": 27
+  },
+  "1433885959635861534-1761958417": {
+    "action": "welcome_role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:53:37.132469",
+    "user": "augusterz38 (1111075280556134440)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761958421": {
+    "action": "role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:53:41.874297",
+    "user": "augusterz38 (1111075280556134440)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761958425": {
+    "action": "user_leave",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:53:45.873646",
+    "user": "plastic_angel666 (1414329442184073317)",
+    "member_count": 26
+  },
+  "1433885959635861534-1761958468": {
+    "action": "welcome_role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:54:28.313299",
+    "user": "oex0 (1213159051911761952)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761958471": {
+    "action": "role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:54:31.798911",
+    "user": "oex0 (1213159051911761952)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761958506": {
+    "action": "user_join",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:55:06.884913",
+    "user": "naosabo1234 (1432417437877534730)",
+    "account_created": "27/10/2025 17:15",
+    "member_count": 28
+  },
+  "1433885959635861534-1761958507": {
+    "action": "role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:55:07.287898",
+    "user": "naosabo1234 (1432417437877534730)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761958510": {
+    "action": "welcome_role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:55:10.753444",
+    "user": "naosabo1234 (1432417437877534730)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761958563": {
+    "action": "user_leave",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:56:03.028983",
+    "user": "augusterz38 (1111075280556134440)",
+    "member_count": 27
+  },
+  "1433885959635861534-1761958643": {
+    "action": "welcome_role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:57:23.868236",
+    "user": "chuchualt__62406 (1428450946312175620)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761958645": {
+    "action": "role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:57:25.243814",
+    "user": "chuchualt__62406 (1428450946312175620)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761958678": {
+    "action": "user_leave",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:57:58.692212",
+    "user": "naosabo1234 (1432417437877534730)",
+    "member_count": 27
+  },
+  "1433885959635861534-1761958704": {
+    "action": "message_edit",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T00:58:24.943428",
+    "author": "meupassadomecondena (1432715679844274319)",
+    "channel": "sms",
+    "before_content": "el j\u00e1 tem mam\u00e3e",
+    "after_content": "ele j\u00e1 tem mam\u00e3e",
+    "message_id": 1433983432056377426
+  },
+  "1433885959635861534-1761958809": {
+    "action": "user_leave",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:00:09.558787",
+    "user": "oex0 (1213159051911761952)",
+    "member_count": 26
+  },
+  "1433885959635861534-1761958851": {
+    "action": "role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:00:51.829775",
+    "user": "mrefnst (1428844722545492049)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761958856": {
+    "action": "user_join",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:00:56.797464",
+    "user": "pccvive (1424271834270011563)",
+    "account_created": "05/10/2025 05:47",
+    "member_count": 28
+  },
+  "1433885959635861534-1761958858": {
+    "action": "role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:00:58.632680",
+    "user": "pccvive (1424271834270011563)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761958862": {
+    "action": "welcome_role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:01:02.465449",
+    "user": "pccvive (1424271834270011563)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761959154": {
+    "action": "user_join",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:05:54.715492",
+    "user": "rayyqzihh_ (1426634427189952613)",
+    "account_created": "11/10/2025 18:15",
+    "member_count": 29
+  },
+  "1433885959635861534-1761959155": {
+    "action": "welcome_role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:05:55.222053",
+    "user": "rayyqzihh_ (1426634427189952613)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761959158": {
+    "action": "role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:05:58.717556",
+    "user": "rayyqzihh_ (1426634427189952613)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761959181": {
+    "action": "message_delete",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:06:21.249678",
+    "author": "meupassadomecondena (1432715679844274319)",
+    "channel": "sms",
+    "content": "# divulguem o sv e ganhem o n\u00famero do doki branquinho alto",
+    "message_id": 1433985396345147584,
+    "attachments_count": 0
+  },
+  "1433885959635861534-1761959228": {
+    "action": "user_leave",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:07:08.534386",
+    "user": "rayyqzihh_ (1426634427189952613)",
+    "member_count": 28
+  },
+  "1433885959635861534-1761959265": {
+    "action": "user_join",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:07:45.858385",
+    "user": "klar_4 (748542859170545754)",
+    "account_created": "27/08/2020 14:02",
+    "member_count": 29
+  },
+  "1433885959635861534-1761959266": {
+    "action": "welcome_role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:07:46.980642",
+    "user": "klar_4 (748542859170545754)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761959270": {
+    "action": "role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:07:50.836230",
+    "user": "klar_4 (748542859170545754)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761959283": {
+    "action": "user_join",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:08:03.777598",
+    "user": "inextaaas (1390441240889135231)",
+    "account_created": "03/07/2025 21:17",
+    "member_count": 30
+  },
+  "1433885959635861534-1761959284": {
+    "action": "welcome_role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:08:04.785938",
+    "user": "inextaaas (1390441240889135231)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761959287": {
+    "action": "role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:08:07.695985",
+    "user": "inextaaas (1390441240889135231)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761959343": {
+    "action": "role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:09:03.792978",
+    "user": "lizz.ys (1393638340749955243)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761959349": {
+    "action": "welcome_role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:09:09.338830",
+    "user": "lizz.ys (1393638340749955243)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761959371": {
+    "action": "user_join",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:09:31.393919",
+    "user": "trance0252 (997356968719171595)",
+    "account_created": "15/07/2022 04:20",
+    "member_count": 32
+  },
+  "1433885959635861534-1761959372": {
+    "action": "role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:09:32.548520",
+    "user": "trance0252 (997356968719171595)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761959376": {
+    "action": "welcome_role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:09:36.442961",
+    "user": "trance0252 (997356968719171595)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761959419": {
+    "action": "user_leave",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:10:19.436264",
+    "user": "trance0252 (997356968719171595)",
+    "member_count": 30
+  },
+  "1433885959635861534-1761959428": {
+    "action": "role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:10:28.739826",
+    "user": "e_ahoff (1433890352837955629)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761959434": {
+    "action": "welcome_role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:10:34.552478",
+    "user": "e_ahoff (1433890352837955629)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761959470": {
+    "action": "user_leave",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:11:10.400356",
+    "user": "pccvive (1424271834270011563)",
+    "member_count": 30
+  },
+  "1433885959635861534-1761959760": {
+    "action": "user_join",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:16:00.335407",
+    "user": "dreamsfad (1401927237950771220)",
+    "account_created": "04/08/2025 13:58",
+    "member_count": 31
+  },
+  "1433885959635861534-1761959761": {
+    "action": "welcome_role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:16:01.141952",
+    "user": "dreamsfad (1401927237950771220)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761959764": {
+    "action": "role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:16:04.388634",
+    "user": "dreamsfad (1401927237950771220)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761959846": {
+    "action": "role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:17:26.447373",
+    "user": "yokaiiih (1190126165692776564)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761959852": {
+    "action": "welcome_role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:17:32.064789",
+    "user": "yokaiiih (1190126165692776564)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761959853": {
+    "action": "role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:17:33.452615",
+    "user": "sonekita_1 (1385339943408107711)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761959858": {
+    "action": "welcome_role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:17:38.396180",
+    "user": "sonekita_1 (1385339943408107711)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761959952": {
+    "action": "user_leave",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:19:12.832629",
+    "user": "sonekita_1 (1385339943408107711)",
+    "member_count": 32
+  },
+  "1433885959635861534-1761960010": {
+    "action": "user_leave",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:20:10.298369",
+    "user": "lizz.ys (1393638340749955243)",
+    "member_count": 31
+  },
+  "1433885959635861534-1761960054": {
+    "action": "user_leave",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:20:54.118858",
+    "user": "dreamsfad (1401927237950771220)",
+    "member_count": 30
+  },
+  "1433885959635861534-1761960081": {
+    "action": "user_join",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:21:21.949535",
+    "user": "moranguxa. (1432635123316166748)",
+    "account_created": "28/10/2025 07:40",
+    "member_count": 31
+  },
+  "1433885959635861534-1761960086": {
+    "action": "role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:21:26.950774",
+    "user": "moranguxa. (1432635123316166748)",
+    "role": "",
+    "role_id": 1433901840646406154
+  },
+  "1433885959635861534-1761960087": {
+    "action": "welcome_role_add",
+    "guild_id": 1433885959635861534,
+    "timestamp": "2025-11-01T01:21:27.083092",
+    "user": "moranguxa. (1432635123316166748)",
+    "role": "",
+    "role_id": 1433901840646406154
   }
 }
